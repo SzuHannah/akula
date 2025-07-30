@@ -68,6 +68,24 @@ Install bentso using pip:
    pip install bentso
 
 
+High-dimensional modelling framework
+====================================
+
+The package now includes generic classes ``LCAModel`` and ``TEAModel`` for
+building technoeconomic or life cycle assessment models with thousands of
+parameters. Models can be allocated by mass, energy, or via system expansion
+when using ``LCAModel``. Users can screen exchanges contributing to impacts,
+parameterize them, run global sensitivity analysis, and simplify models using
+LASSO, symbolic regression or neural networks. Custom sampling strategies can be
+supplied for screening while standard strategies are used for sensitivity
+analysis. The simplified models provide mathematical expressions and report
+their discrepancy to the original model.
+
+Wrappers ``GraphiteLCAModel`` and ``GraphiteTEAModel`` demonstrate how the
+framework can integrate domain-specific implementations such as the
+``lca.py`` and ``vector_model.py`` utilities used in graphite case studies.
+
+
 .. _pyscaffold-notes:
 
 Note
